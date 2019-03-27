@@ -13,7 +13,7 @@ export default {
         add(state, action) {
             console.log(123);
             return {
-                aa: 2,
+                aa: state.aa+1,
             };
         },
     },
