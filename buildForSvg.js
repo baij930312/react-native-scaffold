@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const lineReader = require('readline').createInterface({
-    input: require('fs').createReadStream(path.join(__dirname,'./src/common/aliIcons/iconfont.svg'))
+    input: require('fs').createReadStream(path.join(__dirname,'./src/components/aliIcons/iconfont.svg'))
 });
 
 const names = [];
@@ -17,7 +17,7 @@ lineReader.on('line', function (line) {
     }
 });
 lineReader.on('close',function () {
-    return fs.writeFile(path.resolve(__dirname, './src/common/aliIcons/nameMap.json'), '{\n'+names.join(',\n')+'\n}', function (err) {
+    return fs.writeFile(path.resolve(__dirname, './src/components/aliIcons/nameMap.json'), '{\n'+names.join(',\n')+'\n}', function (err) {
         if (err) {
             throw new Error(err)
         } else {

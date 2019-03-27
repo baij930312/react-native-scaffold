@@ -5,15 +5,17 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "svg": "node ./buildIconMap",
+    "svg": "node ./buildForSvg.js",
     "lint": "eslint ."
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@react-native-community/async-storage": "^1.2.2",
+    "apisauce": "^1.0.2",
     "babel-preset-react-native": "^4.0.1",
     "dva-core": "^1.4.0",
     "immutable": "^4.0.0-rc.12",
+    "prop-types": "^15.7.2",
     "react": "16.8.3",
     "react-native": "0.59.2",
     "react-native-elements": "^1.1.0",

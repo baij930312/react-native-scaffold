@@ -9,9 +9,9 @@ export default class Container extends React.Component {
        console.log(dva().getStore().getState());
        return (
         <Provider store={dva().getStore()}>
-            {/*<SafeAreaView style={{flex:1}}>*/}
+            <SafeAreaView style={{flex:1}}>
                 <App/>
-            {/*</SafeAreaView>*/}
+            </SafeAreaView>
         </Provider>
     );
   }

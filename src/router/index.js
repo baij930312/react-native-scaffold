@@ -1,4 +1,4 @@
-import {createAppContainer, createBottomTabNavigator,createStackNavigator,SafeAreaView} from "react-navigation";
+import {createAppContainer, createBottomTabNavigator,createStackNavigator} from "react-navigation";
 import Home from "../pages/home";
 import Home1 from "../pages/home/home1";
 import {Text,View} from "react-native";

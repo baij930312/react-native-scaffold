@@ -1,6 +1,4 @@
-
 import global from './global'
-
 
 
 

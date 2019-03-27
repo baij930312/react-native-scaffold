@@ -8,10 +8,10 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,TouchableOpacity} from 'react-native';
-import {commonStyles} from "../../common/styles";
+import {Styles} from "../../themes";
 import {connect} from "react-redux";
-import AliIcon from "../../common/aliIcons/aliIcon";
-
+import AliIcon from "../../components/aliIcons/aliIcon";
+import {LoadingHOC} from '../../components/'
 
 
 const instructions = Platform.select({
@@ -21,9 +21,11 @@ const instructions = Platform.select({
         'Shake or press menu button for dev menu',
 });
 
+
 @connect(({ global }) => ({
-    global,
+    global
 }))
+@LoadingHOC
  export default  class Home extends Component {
 
     static navigationOptions = {
@@ -48,7 +50,7 @@ const instructions = Platform.select({
         console.log(this.props);
 
         return (
-            <View style={commonStyles.rowContainer}>
+            <View style={Styles.rowContainer}>
                 <AliIcon name='gonggao' size={20} color="red"/>
 
                 <View style={{marginTop:10}}>
@@ -64,7 +66,7 @@ const instructions = Platform.select({
                     {/*<Text>图标展示<FontAwesome name={'facebook'} color={'red'} size={20}/></Text>*/}
                 </View>
                 <TouchableOpacity onPress={()=>{
-                    this.props.dispatch({type:'global/add'})
+                    this.props.showLoader(true);
                 }}><Text>'asdsadsadas'</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
