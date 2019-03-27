@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@react-native-community/async-storage": "^1.2.2",
     "babel-preset-react-native": "^4.0.1",
-    "dva": "^2.4.1",
     "dva-core": "^1.4.0",
     "immutable": "^4.0.0-rc.12",
     "react": "16.8.3",
@@ -21,7 +21,9 @@
     "react-native-vector-icons": "^6.4.2",
     "react-navigation": "^3.5.1",
     "react-redux": "^6.0.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-persist": "^4.10.2",
+    "seamless-immutable": "^7.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
