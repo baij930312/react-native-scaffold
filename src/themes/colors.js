@@ -1,5 +1,5 @@
 
-
+//色调
 export default {
     commonBackground: '#f6f6f6',
     contentBackground: '#ffffff',

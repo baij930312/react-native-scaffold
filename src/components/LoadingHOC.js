@@ -15,7 +15,7 @@ export class LoadingIndicator extends React.Component {
         ) : null;
     }
 }
-
+//loading hoc 子组件调用 this.props.showLoader  显示或隐藏 指示器
 export default (WrappedComponent) => {
 
     @connect(({ loading }) => ({

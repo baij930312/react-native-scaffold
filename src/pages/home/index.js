@@ -12,6 +12,8 @@ import {Styles} from "../../themes";
 import {connect} from "react-redux";
 import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
+import Separator from "../../components/Separator";
+import {W} from "../../themes/screeUtils";
 
 
 const instructions = Platform.select({
@@ -50,9 +52,8 @@ const instructions = Platform.select({
         console.log(this.props);
 
         return (
-            <View style={Styles.rowContainer}>
+            <View style={Styles.columnContainer}>
                 <AliIcon name='gonggao' size={20} color="red"/>
-
                 <View style={{marginTop:10}}>
                     {/*<FontAwesome.Button name="BTC" backgroundColor="#3b5998">*/}
                         {/*<Text style={{fontFamily: 'Arial', fontSize: 15}}>Login with Facebook</Text>*/}
@@ -71,6 +72,8 @@ const instructions = Platform.select({
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
                 <Text style={styles.instructions}>{instructions}</Text>
+                <Separator color={'red'} paddingLeft={W(100)}/>
+
             </View>
         );
     }

@@ -17,6 +17,7 @@ const immutableTransform = {
     },
 };
 
+//redux持久化配置
 class ReduxPersist {
 
     // active = true;

@@ -19,7 +19,7 @@ export default class Agent {
     }
 }
 
-
+//api 代理
 class NetAgent extends Agent {
     static HPP_HOST = '';
     // static APP_KEY = '';

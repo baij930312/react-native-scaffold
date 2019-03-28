@@ -18,6 +18,7 @@ export default  StyleSheet.create({
     columnContainer: {
         flexDirection:'column',
     },
+    //占满父布局
     fullParent: {
         position: 'absolute',
         top: 0,
