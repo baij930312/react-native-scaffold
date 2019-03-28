@@ -14,6 +14,7 @@ import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
 import {W} from "../../themes/screeUtils";
+import {T} from "../../common/utils";
 
 
 const instructions = Platform.select({
@@ -68,7 +69,7 @@ const instructions = Platform.select({
                 </View>
                 <TouchableOpacity onPress={()=>{
                     this.props.showLoader(true);
-                }}><Text>'asdsadsadas'</Text></TouchableOpacity>
+                }}><Text>{T('english')}</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
                 <Text style={styles.instructions}>{instructions}</Text>

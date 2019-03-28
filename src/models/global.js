@@ -11,7 +11,6 @@ export default {
     },
     reducers: {
         add(state, action) {
-            console.log(123);
             return {
                 aa: state.aa+1,
             };
