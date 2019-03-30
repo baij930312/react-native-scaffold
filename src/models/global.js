@@ -8,6 +8,9 @@ export default {
     },
     effects: {
 
+        *aaa({ payload }, { put, select ,take}) {
+
+        },
     },
     reducers: {
         add(state, action) {

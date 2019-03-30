@@ -4,7 +4,7 @@ import models from "../models";
 import {autoRehydrate} from 'redux-persist';
 
 import {connect} from "react-redux";
-import ReduxPersistConfig from '../config/ReduxPersist';
+import ReduxPersistConfig from './ReduxPersist';
 
 export { connect };
 

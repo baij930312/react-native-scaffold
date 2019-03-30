@@ -13,8 +13,7 @@ import {connect} from "react-redux";
 import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
-import {W} from "../../themes/screeUtils";
-import {T} from "../../common/utils";
+import {T,W} from "../../common/utils";
 
 
 const instructions = Platform.select({
@@ -44,13 +43,10 @@ const instructions = Platform.select({
 
 
     componentDidMount(){
-        console.log(this.props,12312312);
-        // this.props.navigation.setParams({title: '识兔'});
 
     }
 
     render() {
-        console.log(this.props);
 
         return (
             <View style={Styles.columnContainer}>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import dva from "./src/common/dva";
+import dva from "./src/config/dva";
 import App from './src/router'
 import {SafeAreaView} from "react-navigation";
 
