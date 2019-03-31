@@ -30,6 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
             new RNDeviceInfo(),
             new AsyncStoragePackage(),
             new VectorIconsPackage(),
+              new UtilsPackage(),
             new RNGestureHandlerPackage()
       );
     }

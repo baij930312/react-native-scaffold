@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import TabBar from './tabbar'
-
-
 import Home from '../home/home1'
 import Two from '../home/home2'
 

@@ -1,6 +1,6 @@
 import {I18n} from '../language/i18n'
 
-import {PixelRatio,Dimensions} from 'react-native';
+import {PixelRatio, Dimensions, NativeModules} from 'react-native';
 
 let screenW = Dimensions.get('window').width;
 let screenH = Dimensions.get('window').height;
@@ -14,6 +14,10 @@ let screenPxH = PixelRatio.getPixelSizeForLayoutSize(screenH);
 // 高保真的宽高
 const designWidth = 750.0;
 const designHeight = 1334.0;
+
+//原生模块
+const {RNToolsModule} = NativeModules;
+
 
 /**
  * 设置text
@@ -56,3 +60,10 @@ export function T(string){
     return I18n.t(string||'')
 }
 
+
+export  default {
+    //原生显示toast
+    showNativeToast(text){
+        RNToolsModule.showToast(text||'', RNToolsModule['TOAST_SHORT']);
+    }
+}

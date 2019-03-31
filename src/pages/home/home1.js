@@ -31,7 +31,7 @@ export default class Home1 extends Component {
             <View style={Styles.rowContainer}>
                 <TouchableOpacity onPress={()=>{
                     this.props.navigation.navigate({
-                        routeName:'Home2'
+                        routeName:'Home1'
                     })
                     console.log(this.props);
                 }}><Text>'asdsadsadas'</Text></TouchableOpacity>

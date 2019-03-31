@@ -13,7 +13,7 @@ import {connect} from "react-redux";
 import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
-import {T,W} from "../../common/utils";
+import Utils,{T,W} from "../../common/utils";
 
 
 const instructions = Platform.select({
@@ -59,7 +59,7 @@ const instructions = Platform.select({
                     {/*<Text>图标展示<FontAwesome name={'facebook'} color={'red'} size={20}/></Text>*/}
                 </View>
                 <TouchableOpacity onPress={()=>{
-                    this.props.navigation.push('Home2')
+                    Utils.showNativeToast('asdasd')
                 }}><Text>{T('english')}</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>

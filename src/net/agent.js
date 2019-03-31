@@ -1,5 +1,5 @@
 import net from "apisauce";
-import {md5} from './md5'
+// import {md5} from '../common/md5'
 import { Alert } from "react-native";
 
 export default class Agent {
@@ -34,7 +34,7 @@ class NetAgent extends Agent {
     }
 
     //更新通用参数
-    updateCommonParam(uid) {
+    updateCommonParam({uid}) {
         this.commonParam.uid = uid;
 
     }
