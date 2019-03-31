@@ -3,15 +3,15 @@ import { Provider } from 'react-redux';
 import dva from "./src/config/dva";
 import App from './src/router'
 import {SafeAreaView} from "react-navigation";
+import {StatusBar} from "react-native";
 
 export default class Container extends React.Component {
    render() {
-       console.log(dva().getStore().getState());
        return (
         <Provider store={dva().getStore()}>
-            <SafeAreaView style={{flex:1}}>
-                <App/>
-            </SafeAreaView>
+            <App screenProps={{ statusBarHeight: StatusBar.currentHeight}} >
+                <SafeAreaView style={{flex:1}}/>
+            </App>
         </Provider>
     );
   }

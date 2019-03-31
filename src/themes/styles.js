@@ -1,4 +1,5 @@
-import { StyleSheet} from 'react-native';
+import { StyleSheet,StatusBar} from 'react-native';
+import {H} from "../common/utils";
 
 // export const SelectStyle = ({ios, android, ...common}: ViewPropTypes.styles) => {
 //     const ps = Platform.OS === 'ios' ? ios : android;
@@ -26,4 +27,11 @@ export default  StyleSheet.create({
         right: 0,
         bottom: 0,
     },
+    //导航栏样式
+    navBarStyle:{
+        paddingTop: StatusBar.currentHeight,
+        height: StatusBar.currentHeight + 44,
+        backgroundColor: '#4285F4',
+        borderBottomColor: '#ccc',
+    }
 });

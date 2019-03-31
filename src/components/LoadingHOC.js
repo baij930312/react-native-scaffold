@@ -22,7 +22,7 @@ export default (WrappedComponent) => {
         loading,
     }))
     class LoadingHOC extends React.Component {
-        static navigationOptions = WrappedComponent.navigationOptions|| {} ;
+        static navigationOptions = WrappedComponent.navigationOptions|| null ;
 
         constructor(){
             super();

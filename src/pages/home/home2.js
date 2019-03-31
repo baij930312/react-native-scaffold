@@ -20,20 +20,7 @@ const instructions = Platform.select({
 
 export default class Home2 extends Component {
 
-    static navigationOptions = ({ navigation }) => {
 
-        return {
-            header: <View />,
-            headerStyle: {
-                backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-            headerMode: 'none',
-            headerTitleStyle: {
-                fontWeight: 'bold',
-            },
-        };
-    };
 
     render() {
         return (

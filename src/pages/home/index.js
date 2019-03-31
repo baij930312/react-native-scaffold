@@ -31,14 +31,9 @@ const instructions = Platform.select({
  export default  class Home extends Component {
 
     static navigationOptions = {
-        title: '111',
-        headerStyle: {
-            backgroundColor: '#f4511e',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-            fontWeight: 'bold',
-        },
+        title: '123123',
+        headerLeft:<Text>12321</Text>,
+
     };
 
 
@@ -64,7 +59,7 @@ const instructions = Platform.select({
                     {/*<Text>图标展示<FontAwesome name={'facebook'} color={'red'} size={20}/></Text>*/}
                 </View>
                 <TouchableOpacity onPress={()=>{
-                    this.props.showLoader(true);
+                    this.props.navigation.push('Home2')
                 }}><Text>{T('english')}</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>

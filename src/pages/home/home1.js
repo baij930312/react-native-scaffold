@@ -21,17 +21,8 @@ const instructions = Platform.select({
 export default class Home1 extends Component {
 
     static navigationOptions = ({ navigation }) => {
-
         return {
             title: 'Home123',
-            headerStyle: {
-                backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-            headerMode: 'none',
-            headerTitleStyle: {
-                fontWeight: 'bold',
-            },
         };
     };
 
