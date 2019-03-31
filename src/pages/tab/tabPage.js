@@ -38,7 +38,7 @@ export default class Tab extends Component {
                     this.props.navigation.setParams({navOptions : tabs[data.i].navigationOptions})
                 }}
             >
-                {tabs.map((Page,i)=> <Page tabLabel={tabNames[i]} {...this.props}/>)}
+                {tabs.map((Page,i)=> <Page key={i} tabLabel={tabNames[i]} {...this.props}/>)}
             </ScrollableTabView>
         )
     }
