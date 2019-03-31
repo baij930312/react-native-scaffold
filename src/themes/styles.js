@@ -30,8 +30,8 @@ export default  StyleSheet.create({
     //导航栏样式
     navBarStyle:{
         paddingTop: StatusBar.currentHeight,
-        height: StatusBar.currentHeight + 44,
-        backgroundColor: '#4285F4',
+        height: StatusBar.currentHeight + 44 ,
+        backgroundColor: 'red',
         borderBottomColor: '#ccc',
     }
 });

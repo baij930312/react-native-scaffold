@@ -3,6 +3,7 @@ import AutoHeightWebView from './AutoHeightWebView'
 import EmptyView from './EmptyView'
 import LoadingHOC from './LoadingHOC'
 import Separator from './Separator'
+import SafeNavBar from './SafeNavBar'
 import AliIcon from './aliIcons/aliIcon'
 
 
@@ -12,5 +13,6 @@ export {
     EmptyView,
     Separator,
     LoadingHOC,
-    AliIcon
+    AliIcon,
+    SafeNavBar,
 }

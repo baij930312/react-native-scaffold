@@ -9,9 +9,13 @@ export default class Container extends React.Component {
    render() {
        return (
         <Provider store={dva().getStore()}>
-            <App screenProps={{ statusBarHeight: StatusBar.currentHeight}} >
-                <SafeAreaView style={{flex:1}}/>
-            </App>
+            <SafeAreaView style={{flex:1}}>
+                <StatusBar
+                hidden={false}
+                translucent={true}
+                />
+                <App screenProps={{ statusBarHeight: StatusBar.currentHeight}} />
+            </SafeAreaView>
         </Provider>
     );
   }
