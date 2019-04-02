@@ -71,7 +71,7 @@ class NetAgent extends Agent {
             let result = resp.data;
             console.log(result);
             if (result.meta.state !== 'success') {
-                console.log(`API [${url}] error, code: ${result.meta.code}, msg: ${result.meta.message}`);
+                console.warn(`API [${url}] error, code: ${result.meta.code}, msg: ${result.meta.message}`);
                 if (result.meta.message){
                     Alert.alert(
                         "提示", result.meta.message,

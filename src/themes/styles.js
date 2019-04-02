@@ -1,5 +1,4 @@
 import { StyleSheet,StatusBar} from 'react-native';
-import {H} from "../common/utils";
 
 // export const SelectStyle = ({ios, android, ...common}: ViewPropTypes.styles) => {
 //     const ps = Platform.OS === 'ios' ? ios : android;
@@ -11,16 +10,24 @@ import {H} from "../common/utils";
 
 export default  StyleSheet.create({
     //横向布局
-    rowContainer: {
+    row: {
         flexDirection:'row',
-        alignItems:'center',
     },
     //纵向布局
-    columnContainer: {
+    column: {
         flexDirection:'column',
     },
-    //占满父布局
-    fullParent: {
+    //居中布局
+    center: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    //flex 1
+    flex1:{
+        flex: 1,
+    },
+    //绝对布局占满父布局
+    absoluteFullParent: {
         position: 'absolute',
         top: 0,
         left: 0,
@@ -31,7 +38,7 @@ export default  StyleSheet.create({
     navBarStyle:{
         paddingTop: StatusBar.currentHeight,
         height: StatusBar.currentHeight + 44 ,
-        backgroundColor: 'red',
+        backgroundColor: '#fff',
         borderBottomColor: '#ccc',
     }
 });

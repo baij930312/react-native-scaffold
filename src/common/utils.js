@@ -12,8 +12,8 @@ let screenPxW = PixelRatio.getPixelSizeForLayoutSize(screenW);
 let screenPxH = PixelRatio.getPixelSizeForLayoutSize(screenH);
 
 // 高保真的宽高
-const designWidth = 750.0;
-const designHeight = 1334.0;
+const designWidth = 375.0;
+const designHeight = 667.0;
 
 //原生模块
 const {RNToolsModule} = NativeModules;
@@ -57,6 +57,9 @@ export function W(size:Number) {
 
 //多语言支持
 export function T(string){
+    if (!!text === false){
+        return;
+    }
     return I18n.t(string||'')
 }
 
@@ -64,6 +67,9 @@ export function T(string){
 export  default {
     //原生显示toast
     showNativeToast(text){
+        if (!!text === false){
+            return;
+        }
         RNToolsModule.showToast(text||'', RNToolsModule['TOAST_SHORT']);
     }
 }
