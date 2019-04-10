@@ -19,7 +19,11 @@ const instructions = Platform.select({
 
 
 export default class Home2 extends Component {
-
+    static navigationOptions = ({ navigation }) => {
+        return {
+            headerStyle:Styles.safeNavBarStyle
+        };
+    };
 
 
     render() {

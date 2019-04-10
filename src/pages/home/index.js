@@ -14,7 +14,6 @@ import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
 import Utils, { W} from "../../common/utils";
-import SafeNavBar from "../../components/SafeNavBar";
 // import SafeNavBar from "../../components/SafeNavBar";
 // import Utils,{T,W} from "~asd/utils";
 // import {SafeNavBar} from "~/components";
@@ -37,7 +36,6 @@ const instructions = Platform.select({
  export default  class Home extends Component {
 
     static navigationOptions = {
-       header:<SafeNavBar/>
 
     };
 

@@ -42,6 +42,13 @@ export default  StyleSheet.create({
         backgroundColor: '#fff',
         borderBottomColor: '#ccc',
     },
+    //当不需要导航栏时 的安全区样式
+    safeNavBarStyle:{
+        paddingTop: Metrics.isAndroid? StatusBar.currentHeight:0,
+        height: Metrics.isAndroid? StatusBar.currentHeight:0 ,
+        backgroundColor: '#fff',
+        borderBottomColor: '#ccc',
+    },
     //底部导航样式
     tabBarStyle: {
         height: 50,
