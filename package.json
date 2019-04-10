@@ -26,7 +26,6 @@
     "react-native-vector-icons": "^6.4.2",
     "react-navigation": "^3.5.1",
     "react-redux": "^6.0.1",
-    "redux": "^4.0.1",
     "redux-persist": "^4.10.2",
     "seamless-immutable": "^7.1.4"
   },
@@ -35,6 +34,7 @@
     "@babel/runtime": "^7.4.2",
     "@react-native-community/eslint-config": "^0.0.3",
     "babel-jest": "^24.5.0",
+    "babel-plugin-root-import": "^6.1.0",
     "eslint": "^5.15.3",
     "jest": "^24.5.0",
     "metro-react-native-babel-preset": "^0.53.1",

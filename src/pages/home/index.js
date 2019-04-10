@@ -13,8 +13,11 @@ import {connect} from "react-redux";
 import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
-import Utils,{T,W} from "../../common/utils";
-import {SafeNavBar} from "../../components";
+import Utils, {W} from "../../common/utils";
+import SafeNavBar from "../../components/SafeNavBar";
+// import SafeNavBar from "../../components/SafeNavBar";
+// import Utils,{T,W} from "~asd/utils";
+// import {SafeNavBar} from "~/components";
 
 
 const instructions = Platform.select({
@@ -37,13 +40,10 @@ const instructions = Platform.select({
     };
 
     componentDidMount(){
-
     }
-
     render() {
-
         return (
-            <View style={Styles.columnContainer}>
+            <View style={[styles.header,Styles.column]}>
                 <AliIcon name='gonggao' size={20} color="red"/>
                 <View style={{marginTop:10}}>
                     {/*<FontAwesome.Button name="BTC" backgroundColor="#3b5998">*/}
@@ -57,7 +57,7 @@ const instructions = Platform.select({
 
                     {/*<Text>图标展示<FontAwesome name={'facebook'} color={'red'} size={20}/></Text>*/}
                 </View>
-                <TouchableOpacity onPress={()=>{
+                <TouchableOpacity activeOpacity={1}  onPress={()=>{
                     Utils.showNativeToast('asdasd')
                 }}><Text>{T('english')}</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
