@@ -60,7 +60,7 @@ const instructions = Platform.select({
                     {/*<Text>图标展示<FontAwesome name={'facebook'} color={'red'} size={20}/></Text>*/}
                 </View>
                 <TouchableOpacity activeOpacity={1}  onPress={()=>{
-                    Utils.showNativeToast('asdasd')
+                    this.props.showLoader(true);
                 }}><Text>{this.props.t('english')}</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>

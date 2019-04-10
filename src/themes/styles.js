@@ -1,12 +1,13 @@
 import { StyleSheet,StatusBar} from 'react-native';
+import {Metrics} from "./";
 
-// export const SelectStyle = ({ios, android, ...common}: ViewPropTypes.styles) => {
-//     const ps = Platform.OS === 'ios' ? ios : android;
-//     return {
-//         ...common,
-//         ...ps,
-//     };
-// };
+export const SelectStyle = ({ios, android, ...common}) => {
+    const ps = Platform.OS === 'ios' ? ios : android;
+    return {
+        ...common,
+        ...ps,
+    };
+};
 
 export default  StyleSheet.create({
     //横向布局
@@ -36,8 +37,8 @@ export default  StyleSheet.create({
     },
     //导航栏样式
     navBarStyle:{
-        paddingTop: StatusBar.currentHeight,
-        height: StatusBar.currentHeight + 44 ,
+        paddingTop: Metrics.isAndroid? StatusBar.currentHeight:0,
+        height: (Metrics.isAndroid? StatusBar.currentHeight:0) + 44 ,
         backgroundColor: '#fff',
         borderBottomColor: '#ccc',
     },

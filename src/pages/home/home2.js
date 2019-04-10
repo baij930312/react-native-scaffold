@@ -24,7 +24,7 @@ export default class Home2 extends Component {
 
     render() {
         return (
-            <View style={Styles.rowContainer}>
+            <View style={Styles.row}>
                 {/*<TouchableOpacity onPress={()=>{*/}
                     {/*this.props.navigation.navigate({*/}
                         {/*routeName:'tab'*/}

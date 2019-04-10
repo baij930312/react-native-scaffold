@@ -29,14 +29,13 @@ export default class Home1 extends Component {
 
     render() {
         return (
-            <View style={Styles.row}>
-                {/*<TouchableOpacity onPress={()=>{*/}
-                    {/*this.props.navigation.navigate({*/}
-                        {/*routeName:'Home1',*/}
-                    {/*})*/}
-                    {/*console.log(this.props);*/}
-                {/*}}><Text>{T('english')}</Text></TouchableOpacity>*/}
-                <Text style={styles.welcome}>home</Text>
+            <View style={[Styles.column,styles.container]}>
+                <TouchableOpacity onPress={()=>{
+                    this.props.navigation.navigate({
+                        routeName:'Home1',
+                    })
+                }}><Text>{'aaaaa'}</Text></TouchableOpacity>
+                <Text style={styles.welcome}>home11112311</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
                 <Text style={styles.instructions}>{instructions}</Text>
             </View>
@@ -46,7 +45,7 @@ export default class Home1 extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
@@ -57,11 +56,12 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     instructions: {
+        flex:1,
         textAlign: 'center',
         color: '#333333',
-        lineHeight :100,
-        marginBottom: 5,
-        backgroundColor: 'red',
-        height:H(200),
+        // lineHeight :100,
+        // marginBottom: 5,
+        backgroundColor: 'blue',
+        // height:H(200),
     },
 });
