@@ -1,25 +1,25 @@
-import I18n,{ getLanguages } from 'react-native-i18n'
-import DeviceInfo from 'react-native-device-info'
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 import en from './en'
 import zh from './zh'
-
-
-
-I18n.defaultLocale = 'zh';
-
-I18n.fallbacks = true;
-
-I18n.translations = {
+// the translations
+// (tip move them in a JSON file and import them)
+const resources = {
     en,
     zh,
 };
 
-I18n.localeLanguage = () => {
+i18n
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+        resources,
+        lng: "zh",
+        keySeparator: false, // we do not use keys in form messages.welcome
 
-    I18n.locale = DeviceInfo.getDeviceLocale();
-    return I18n.locale;
+        interpolation: {
+            escapeValue: false // react already safes from xss
+        }
+    });
 
-};
-
-
-export { I18n, getLanguages };
+export default i18n;

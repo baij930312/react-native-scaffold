@@ -25,12 +25,12 @@ export default class Home2 extends Component {
     render() {
         return (
             <View style={Styles.rowContainer}>
-                <TouchableOpacity onPress={()=>{
-                    this.props.navigation.navigate({
-                        routeName:'tab'
-                    })
-                    console.log(this.props);
-                }}><Text>'asdsadsadas'</Text></TouchableOpacity>
+                {/*<TouchableOpacity onPress={()=>{*/}
+                    {/*this.props.navigation.navigate({*/}
+                        {/*routeName:'tab'*/}
+                    {/*})*/}
+                    {/*console.log(this.props);*/}
+                {/*}}><Text>{T('english')}</Text></TouchableOpacity>*/}
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
                 <Text style={styles.instructions}>{instructions}</Text>

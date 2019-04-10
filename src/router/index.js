@@ -8,7 +8,7 @@ import {Styles} from "../themes";
 
 
 const mainStack = createStackNavigator({
-        Tab:Tab,
+        // Tab:Tab,
         Home1:Home,
         Home2:Home2,
     },

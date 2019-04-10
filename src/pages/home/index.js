@@ -13,12 +13,13 @@ import {connect} from "react-redux";
 import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
-import Utils, {W} from "../../common/utils";
+import Utils, { W} from "../../common/utils";
 import SafeNavBar from "../../components/SafeNavBar";
 // import SafeNavBar from "../../components/SafeNavBar";
 // import Utils,{T,W} from "~asd/utils";
 // import {SafeNavBar} from "~/components";
 
+import { withTranslation } from 'react-i18next';
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -32,6 +33,7 @@ const instructions = Platform.select({
     global
 }))
 @LoadingHOC
+@withTranslation()
  export default  class Home extends Component {
 
     static navigationOptions = {
@@ -59,7 +61,7 @@ const instructions = Platform.select({
                 </View>
                 <TouchableOpacity activeOpacity={1}  onPress={()=>{
                     Utils.showNativeToast('asdasd')
-                }}><Text>{T('english')}</Text></TouchableOpacity>
+                }}><Text>{this.props.t('english')}</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
                 <Text style={styles.instructions}>{instructions}</Text>

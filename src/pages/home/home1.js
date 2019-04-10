@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Styles} from "../../themes";
-import {H, W} from "../../common/utils";
+import {H,} from "../../common/utils";
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -30,12 +30,12 @@ export default class Home1 extends Component {
     render() {
         return (
             <View style={Styles.row}>
-                <TouchableOpacity onPress={()=>{
-                    this.props.navigation.navigate({
-                        routeName:'Home1',
-                    })
-                    console.log(this.props);
-                }}><Text>'asdsadsadas'</Text></TouchableOpacity>
+                {/*<TouchableOpacity onPress={()=>{*/}
+                    {/*this.props.navigation.navigate({*/}
+                        {/*routeName:'Home1',*/}
+                    {/*})*/}
+                    {/*console.log(this.props);*/}
+                {/*}}><Text>{T('english')}</Text></TouchableOpacity>*/}
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
                 <Text style={styles.instructions}>{instructions}</Text>

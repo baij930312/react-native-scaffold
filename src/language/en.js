@@ -1,6 +1,7 @@
 
 export default {
-    english: 'english',
-    chinese: 'chinese',
-
+    translation: {
+        english: 'english',
+        chinese: 'chinese',
+    }
 }

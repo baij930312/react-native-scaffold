@@ -1,5 +1,3 @@
-import {I18n} from '../language/i18n'
-
 import {PixelRatio, Dimensions, NativeModules} from 'react-native';
 
 let screenW = Dimensions.get('window').width;
@@ -54,15 +52,6 @@ export function W(size:Number) {
     size = Math.round((scaleWidth/pixelRatio + 0.5));
     return size;
 }
-
-//多语言支持
-export function T(string){
-    if (!!text === false){
-        return;
-    }
-    return I18n.t(string||'')
-}
-
 
 export  default {
     //原生显示toast
