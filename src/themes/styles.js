@@ -40,5 +40,12 @@ export default  StyleSheet.create({
         height: StatusBar.currentHeight + 44 ,
         backgroundColor: '#fff',
         borderBottomColor: '#ccc',
-    }
+    },
+    //底部导航样式
+    tabBarStyle: {
+        height: 50,
+        backgroundColor: '#000',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+    },
 });

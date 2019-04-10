@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Metrics } from '../../themes'
+import Styles from "../../themes/styles";
 //动画
 let AnimatedValues = [new Animated.Value(0.9), new Animated.Value(0.9), new Animated.Value(0.9), new Animated.Value(0.9)];
 
@@ -65,8 +66,8 @@ export  default  class TabBar extends Component {
     renderTabOption(tab, i) {
         const color = this.props.activeTab === i ? "green" : "#c0c0c0"; // 判断i是否是当前选中的tab，设置不同的颜色
         return (
-            <TouchableOpacity key={i} onPress={() => { this.clickTab(tab, i) }} >
-                <View style={styles.tabBox}>
+            <TouchableOpacity activeOpacity={1} key={i} onPress={() => { this.clickTab(tab, i) }} >
+                <View style={[styles.tabBox,Styles.center,Styles.flex1]}>
 
                     <Animated.View
                         style={{
@@ -92,7 +93,7 @@ export  default  class TabBar extends Component {
     render() {
 
         return (
-            <View style={styles.tabRow}>
+            <View style={Styles.tabBarStyle}>
                 {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
             </View>
         );
@@ -101,18 +102,7 @@ export  default  class TabBar extends Component {
 
 
 const styles = StyleSheet.create({
-    tabRow: {
-        height: 50,
-        backgroundColor: '#fff',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-    },
     tabBox: {
         width: Metrics.screenWidth / 4,
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
     }
-
-
 });
