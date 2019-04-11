@@ -5,31 +5,32 @@ import Home from "../pages/home";
 import Home1 from "../pages/home/home1";
 import React from "react";
 import Home2 from "../pages/home/home2";
-// import Tab from "../pages/tab/tabPage";
 import {Styles} from "../themes";
 
+const tabRouteConfigMap = {
+    Home: {
+        screen: Home1,
+        navigationOptions: () => ({
+            title:'home',
+            headerStyle: Styles.navBarStyle,
+            headerTintColor: 'red',
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            },
+            tabBarLabel: '首页',
+        })
+    },
+    Find: {
+        screen: Home2,
+        navigationOptions: () => ({
+            title:'find',
+            tabBarLabel: '发现',
+        })
+    }
+};
 
-const Tab = createBottomTabNavigator    ({
-        Home: {
-            screen: Home1,
-            navigationOptions: () => ({
-                title:'aaa',
-                headerStyle: Styles.navBarStyle,
-                headerTintColor: '#000',
-                headerTitleStyle: {
-                    fontWeight: 'bold',
-                },
-                tabBarLabel: '首页',
-            })
-        },
-        Find: {
-            screen: Home2,
-            navigationOptions: () => ({
-                title:'aaa',
-                tabBarLabel: '发现',
-            })
-        }
-    }, {
+
+const Tab = createBottomTabNavigator(tabRouteConfigMap, {
         initialRouteName: 'Find',
         tabBarPosition: 'bottom',
         lazy: true,
@@ -41,17 +42,15 @@ const Tab = createBottomTabNavigator    ({
             },
         }
     }
-)
+);
 
 const mainStack = createStackNavigator({
         Tab:{
             screen: Tab,
             navigationOptions: ({ navigation }) => {
                 const { routes, index } = navigation.state;
-                const navigationOptions = {};
-                console.log(routes[index].routeName);
-
-                return navigationOptions;
+                const key =  routes[index].key;
+                return tabRouteConfigMap[key].navigationOptions();
             }
         },
         // Home1:Home,
@@ -70,7 +69,7 @@ const mainStack = createStackNavigator({
             };
         },
     },
-    );
+);
 
 
 export default createAppContainer(mainStack);
