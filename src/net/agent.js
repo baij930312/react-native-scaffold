@@ -10,10 +10,10 @@ export default class Agent {
             headers: {
                 'Cache-Control': 'no-cache',
                 'Accept': 'application/json',
-                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/json',
                 ...headers,
             },
-            timeout: 10000, // 10 secends.
+            timeout: 10000, // 10 seconds.
             ...other,
         });
     }
@@ -21,7 +21,7 @@ export default class Agent {
 
 //api 代理
 class NetAgent extends Agent {
-    static HPP_HOST = '';
+    static HPP_HOST = 'http://192.168.31.168:8102';
     // static APP_KEY = '';
     // static SECRET_KEY = '';
 
@@ -69,7 +69,7 @@ class NetAgent extends Agent {
                 return;
             }
             let result = resp.data;
-            console.log(result);
+            console.log(resp);
             if (result.meta.state !== 'success') {
                 console.warn(`API [${url}] error, code: ${result.meta.code}, msg: ${result.meta.message}`);
                 if (result.meta.message){
@@ -85,5 +85,5 @@ class NetAgent extends Agent {
 }
 
 
-export const Agent = new NetAgent();
+export const ApiAgent = new NetAgent();export const ApiAgent2 = new NetAgent();
 

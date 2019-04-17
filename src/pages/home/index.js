@@ -14,11 +14,8 @@ import AliIcon from "../../components/aliIcons/aliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
 import Utils, { W} from "../../common/utils";
-// import SafeNavBar from "../../components/SafeNavBar";
-// import Utils,{T,W} from "~asd/utils";
-// import {SafeNavBar} from "~/components";
-
 import { withTranslation } from 'react-i18next';
+import api from "~/net/api";
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -58,7 +55,9 @@ const instructions = Platform.select({
                     {/*<Text>图标展示<FontAwesome name={'facebook'} color={'red'} size={20}/></Text>*/}
                 </View>
                 <TouchableOpacity activeOpacity={1}  onPress={()=>{
-                    this.props.showLoader(true);
+                    api.login().then(data=>{
+                        console.log(data);
+                    })
                 }}><Text>{this.props.t('english')}</Text></TouchableOpacity>
                 <Text style={styles.welcome}>home</Text>
                 <Text style={styles.instructions}>To get started, edit App.js</Text>
