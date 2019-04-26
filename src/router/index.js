@@ -45,14 +45,15 @@ const Tab = createBottomTabNavigator(tabRouteConfigMap, {
 );
 
 const mainStack = createStackNavigator({
-            // Tab:{
-            //     screen: Tab,
-            //     navigationOptions: ({ navigation }) => {
-            //         const { routes, index } = navigation.state;
-            //         const key =  routes[index].key;
-            //         return tabRouteConfigMap[key].navigationOptions();
-            //     }
-            // },
+
+        Tab:{
+            screen: Tab,
+            navigationOptions: ({ navigation }) => {
+                const { routes, index } = navigation.state;
+                const key =  routes[index].key;
+                return tabRouteConfigMap[key].navigationOptions();
+            }
+        },
         Home1:Home,
         Home2:Home2,
     },

@@ -1,6 +1,10 @@
 package com.scaffold;
 
+import android.os.Bundle;
+import android.os.PersistableBundle;
+
 import com.facebook.react.ReactActivity;
+import com.pgyersdk.update.PgyUpdateManager;
 
 public class MainActivity extends ReactActivity {
 
@@ -12,4 +16,12 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "scaffold";
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        PgyUpdateManager.setIsForced(true); //设置是否强制更新。true为强制更新；false为不强制更新（默认值）。
+        PgyUpdateManager.register(this);
+    }
+
 }

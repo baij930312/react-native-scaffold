@@ -5950,6 +5950,11 @@ react-native-gesture-handler@^1.1.0:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-largelist-v3@^3.0.13:
+  version "3.0.13"
+  resolved "http://registry.npm.taobao.org/react-native-largelist-v3/download/react-native-largelist-v3-3.0.13.tgz#2fbe0429894aa115c4d252a51a0703feb005fa70"
+  integrity sha1-L74EKYlKoRXE0lKlGgcD/rAF+nA=
+
 react-native-ratings@^6.3.0:
   version "6.3.1"
   resolved "http://registry.npm.taobao.org/react-native-ratings/download/react-native-ratings-6.3.1.tgz#4e4bd87f376423dc62c933f570fc1932c78adaa4"
@@ -5985,6 +5990,11 @@ react-native-secharts@^1.6.1:
   integrity sha1-UJJ3YhFV8QBZKlzfbP9Zrx1ornw=
   dependencies:
     prop-types "15.5.10"
+
+react-native-spring-scrollview@^2.0.20:
+  version "2.0.20"
+  resolved "http://registry.npm.taobao.org/react-native-spring-scrollview/download/react-native-spring-scrollview-2.0.20.tgz#6c194ffc80b68df37b89b6aebadd8b7b1e47fcfa"
+  integrity sha1-bBlP/IC2jfN7ibauut2Lex5H/Po=
 
 react-native-status-bar-height@^2.2.0:
   version "2.3.1"
