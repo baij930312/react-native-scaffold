@@ -2,12 +2,12 @@
 react 0.59 + dva + react-navigation 3.6.1 构建的快速开发轮子~
 
 # 支持：<br>
-  1.适配安卓沉浸状态栏和刘海屏<br>
+  1.适配沉浸状态栏和刘海屏<br>
   2.装饰器方式关联dva-model<br>
   3.api请求采用apisauce<br>
   4.多语言支持采用i18next<br>
   5.持久化采用redux-persist<br>
-  6.支持svg (temp目录下放入ttf以及svg文件 运行yarn svg 会自动导入带安卓端)<br>
+  6.支持svg (在temp目录下放入ttf以及svg文件 运行yarn svg 会自动导入安卓端)<br>
 
 # 目录<br>
     
