@@ -19,7 +19,7 @@ var upBorderColor = '#8A0000';
 var downColor = '#00da3c';
 var downBorderColor = '#008F28';
 
-var dataCount = 2e4;
+var dataCount = 2e2;
 var data = generateOHLC(dataCount);
 
 var option4 = {
