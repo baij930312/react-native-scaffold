@@ -67,7 +67,7 @@ export default class AlertView extends React.Component {
                             {
                                 function(){
                                     return actions.map((item,index)=>{
-                                        return <TouchableOpacity style={[Styles.center,Styles.flex1,Styles.row]} activeOpacity={1}
+                                        return <TouchableOpacity key={index} style={[Styles.center,Styles.flex1,Styles.row]} activeOpacity={1}
                                         onPress={()=>{
                                             if (item.click){
                                                 item.click();
