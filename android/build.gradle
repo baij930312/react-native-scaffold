@@ -25,8 +25,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
+        jcenter()
         mavenCentral()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm

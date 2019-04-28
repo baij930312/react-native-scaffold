@@ -5,6 +5,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.media.MediaMetadataRetriever;
 import android.os.Environment;
+import android.view.Gravity;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Toast;
 
@@ -69,7 +70,9 @@ public class UtilsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void showToast(String content, int duration) {
-        Toast.makeText(getCurrentActivity(), content, duration).show();
+        Toast showToast = Toast.makeText(getCurrentActivity(), content, duration);
+        showToast.setGravity(Gravity.CENTER, 0, 0);
+        showToast.show();
     }
 
     @ReactMethod

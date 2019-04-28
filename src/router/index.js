@@ -51,7 +51,7 @@ const mainStack = createStackNavigator({
             navigationOptions: ({ navigation }) => {
                 const { routes, index } = navigation.state;
                 const key =  routes[index].key;
-                return tabRouteConfigMap[key].navigationOptions();
+                return tabRouteConfigMap[key].screen.navigationOptions({ navigation });
             }
         },
         Home1:Home,
