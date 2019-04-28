@@ -4,28 +4,39 @@ import {
     StyleSheet,
     View,
 } from 'react-native';
-import {W} from "../common/utils";
+import {W,H} from "../common/utils";
 
 //分割线
 export default class Separator extends React.Component {
 
     static propTypes = {
-        height: PropTypes.number,//高度默认1px
-        paddingLeft: PropTypes.number,
-        paddingRight: PropTypes.number,
+        length: PropTypes.number,//高度默认1px
+        startPadding: PropTypes.number,
+        endPadding: PropTypes.number,
+        direction: PropTypes.number,//0 横向  1 竖向
         color: PropTypes.string,
     };
 
     render() {
-        const height = this.props.height || W(1);
-        const paddingLeft = this.props.paddingLeft ||0;
-        const paddingRight = this.props.paddingRight || 0;
+        const length = this.props.length || H(1);
+        const startPadding = this.props.startPadding ||0;
+        const endPadding = this.props.endPadding || 0;
         const color = this.props.color || '#000';
+        const direction = this.props.direction || 0;
 
         return (
-            <View style={{paddingLeft,paddingRight,height,width: '100%',backgroundColor:'transparent'}}>
-                <View style={{backgroundColor:color,flex:1}}/>
-            </View>
-        );
+            (direction === 0)
+                    ?
+                    <View style={{paddingLeft:startPadding, paddingRight:endPadding,height:length,width: '100%',backgroundColor:'transparent'}}>
+                        <View style={{backgroundColor:color,flex:1}}/>
+                    </View>
+
+                    :
+                    <View style={{paddingTop:startPadding,paddingBottom:endPadding,width:length,height: '100%',backgroundColor:'transparent'}}>
+                        <View style={{backgroundColor:color,flex:1}}/>
+                    </View>
+
+        )
+
     }
 }

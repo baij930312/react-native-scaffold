@@ -5,6 +5,7 @@ import RefreshListView from './RefreshListView'
 import LoadingHOC from './LoadingHOC'
 import Separator from './Separator'
 import AliIcon from './aliIcons/aliIcon'
+import AlertView from './AlertView'
 
 
 export {
@@ -15,4 +16,5 @@ export {
     LoadingHOC,
     AliIcon,
     RefreshListView,
+    AlertView,
 }

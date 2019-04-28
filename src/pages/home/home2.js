@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import {ListView, Platform, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Styles} from "../../themes";
 import RefreshListView from "../../components/RefreshListView";
-import {LoadingHOC} from "../../components";
+import {AlertView, LoadingHOC} from "../../components";
 import AliIcon from "./index";
 import { Tooltip, Text } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
@@ -66,9 +66,19 @@ export default class Home2 extends Component {
         return (
             <View style={styles.container}>
 
-
+                <AlertView key={'alert'} ref={o => this.alert = o}
+                           visible={true}
+                           title={'哈哈哈'}
+                           actions={[
+                               {text:'123',click:()=>{
+                                   console.log(111);
+                               },style:{color:'red'}},
+                               {text:'123'}
+                               ]}
+                />
                 <View>
                     <Text onPress={()=>{Utils.showNativeToast('asdsadsad')}}>Open ActionSheet</Text>
+                    <Text onPress={()=>{this.alert.show()}}>show alert</Text>
                     <ActionSheet
                         ref={o => this.ActionSheet = o}
                         title={'Which one do you like ?'}
@@ -101,8 +111,6 @@ export default class Home2 extends Component {
                                 })
 
                             },1000);
-
-
                         })
                     }}
                     onRefresh={(pageNum,pageSize)=>{
