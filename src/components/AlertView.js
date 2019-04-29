@@ -10,12 +10,10 @@ import {
 } from 'react-native';
 // import Separator from "./Separator";
 import Colors from "../themes/colors";
-import {Metrics} from "../themes";
 import {H} from "../common/utils";
 import Separator from "./Separator";
 import Styles from "../themes/styles";
 import PropTypes from "prop-types";
-
 
 export default class AlertView extends React.Component {
 
@@ -49,7 +47,6 @@ export default class AlertView extends React.Component {
                                   {...props}
                 >
                     <View style={[ModalStyles.content,{height:height||H(147)}]}>
-
                         <View style={[Styles.flex1,Styles.center]}>
                             {
                                 function(){

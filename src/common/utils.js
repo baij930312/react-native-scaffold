@@ -56,9 +56,8 @@ export function W(size:Number) {
 export  default {
     //原生显示toast
     showNativeToast(text){
-        if (!!text === false){
-            return;
+        if (!!text){
+            RNToolsModule.showToast(text||'', RNToolsModule['TOAST_SHORT']);
         }
-        RNToolsModule.showToast(text||'', RNToolsModule['TOAST_SHORT']);
     }
 }
