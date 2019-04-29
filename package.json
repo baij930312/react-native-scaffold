@@ -28,6 +28,7 @@
     "react-native-largelist-v3": "^3.0.13",
     "react-native-linear-gradient": "^2.5.4",
     "react-native-material-dropdown": "^0.11.1",
+    "react-native-picker": "^4.3.7",
     "react-native-scrollable-tab-view": "^0.10.0",
     "react-native-secharts": "^1.6.1",
     "react-native-snap-carousel": "^3.7.5",

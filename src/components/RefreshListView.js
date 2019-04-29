@@ -14,6 +14,7 @@ import {ChineseNormalFooter, ChineseNormalHeader, CommonLottieFooter} from "reac
 import PropTypes from "prop-types";
 import { LoadingFooter } from "react-native-spring-scrollview/LoadingFooter";
 import {Styles} from "../themes";
+import EmptyView from "./EmptyView";
 
 export default class RefreshListView extends React.Component {
     static propTypes = {
@@ -37,18 +38,23 @@ export default class RefreshListView extends React.Component {
         const data = [{items:(this.props.data?this.props.data:[])}];
         let canLoadMore = this.props.total > this.props.data.length;
         return (
-            <LargeList
-                {...this.props}
-                data={data}
-                ref={ref => (this._list = ref)}
-                heightForIndexPath={this.props.heightForIndexPath}
-                renderIndexPath={({ section: section, row: row })=>this.props.renderItem({item:this.props.data[row],index:row})}
-                refreshHeader={ChineseNormalHeader}
-                loadingFooter={canLoadMore?ChineseNormalFooter:NoMoreFooter}
-                showsVerticalScrollIndicator={false}
-                onRefresh={this._onRefresh}
-                onLoading={this._onLoading}
-            />
+            (this.props.data.length === 0)
+                ?
+                <EmptyView/>
+                :
+                <LargeList
+                    {...this.props}
+                    data={data}
+                    ref={ref => (this._list = ref)}
+                    heightForIndexPath={this.props.heightForIndexPath}
+                    renderIndexPath={({ section: section, row: row })=>this.props.renderItem({item:this.props.data[row],index:row})}
+                    refreshHeader={ChineseNormalHeader}
+                    loadingFooter={canLoadMore?ChineseNormalFooter:NoMoreFooter}
+                    showsVerticalScrollIndicator={false}
+                    onRefresh={this._onRefresh}
+                    onLoading={this._onLoading}
+                />
+
         );
     }
 

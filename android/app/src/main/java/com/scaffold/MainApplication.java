@@ -3,6 +3,7 @@ package com.scaffold;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.beefe.picker.PickerViewPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.bolan9999.SpringScrollViewPackage;
 import com.pgyersdk.crash.PgyCrashManager;
@@ -30,6 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new PickerViewPackage(),
             new LinearGradientPackage(),
             new SpringScrollViewPackage(),
             new RNCWebViewPackage(),

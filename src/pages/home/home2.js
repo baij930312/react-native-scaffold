@@ -20,6 +20,8 @@ import Carousel, {Pagination} from 'react-native-snap-carousel';
 import Swipeout from 'react-native-swipeout';
 import Utils from "../../common/utils";
 import {Dropdown} from "react-native-material-dropdown";
+import EmptyView from "../../components/EmptyView";
+import Picker from "react-native-picker";
 
 
 
@@ -59,7 +61,65 @@ export default class Home2 extends Component {
         );
     }
 
+    _createDateData() {
+        let date = [];
+        for(let i=1970;i<2020;i++){
+            let month = [];
+            for(let j = 1;j<13;j++){
+                let day = [];
+                if(j === 2){
+                    for(let k=1;k<29;k++){
+                        day.push(k+'日');
+                    }
+                    //Leap day for years that are divisible by 4, such as 2000, 2004
+                    if(i%4 === 0){
+                        day.push(29+'日');
+                    }
+                }
+                else if(j in {1:1, 3:1, 5:1, 7:1, 8:1, 10:1, 12:1}){
+                    for(let k=1;k<32;k++){
+                        day.push(k+'日');
+                    }
+                }
+                else{
+                    for(let k=1;k<31;k++){
+                        day.push(k+'日');
+                    }
+                }
+                let _month = {};
+                _month[j+'月'] = day;
+                month.push(_month);
+            }
+            let _date = {};
+            _date[i+'年'] = month;
+            date.push(_date);
+        }
+        return date;
+    }
 
+    _showDatePicker() {
+        Picker.init({
+            pickerData: this._createDateData(),
+            pickerTitleText: ' ',
+            pickerCancelBtnText: '   取消',
+            pickerConfirmBtnText: '确定   ',
+            pickerToolBarBg: [255, 255, 255, 1],
+            pickerCancelBtnColor:[219,172,70,1],
+            pickerConfirmBtnColor:[219,172,70,1],
+            pickerBg: [255, 255, 255, 1],
+            pickerFontColor: [0, 0 ,0, 1],
+
+            onPickerConfirm: (pickedValue, pickedIndex) => {
+                console.log('date', pickedValue, pickedIndex);
+            },
+            onPickerCancel: (pickedValue, pickedIndex) => {
+                console.log('date', pickedValue, pickedIndex);
+            },
+
+        });
+        Picker.show();
+        Picker.select(['2018年','2月','2日'])
+    }
 
     render() {
         var btnsTypes = [
@@ -172,7 +232,7 @@ export default class Home2 extends Component {
                     <ActionButton.Item buttonColor='#9b59b6' title="New Task" onPress={() => this.showActionSheet()}>
                         <Icon name="md-create" style={styles.actionButtonIcon} />
                     </ActionButton.Item>
-                    <ActionButton.Item buttonColor='#3498db' title="Notifications" onPress={() => {}}>
+                    <ActionButton.Item buttonColor='#3498db' title="Notifications" onPress={() => {this._showDatePicker()}}>
                         <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
                     </ActionButton.Item>
                     <ActionButton.Item buttonColor='#1abc9c' title="All Tasks" onPress={() => {}}>
