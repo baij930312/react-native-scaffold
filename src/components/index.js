@@ -6,6 +6,7 @@ import LoadingHOC from './LoadingHOC'
 import Separator from './Separator'
 import AliIcon from './aliIcons/aliIcon'
 import AlertView from './AlertView'
+import DatePicker from './DatePicker'
 
 
 export {
@@ -17,4 +18,5 @@ export {
     AliIcon,
     RefreshListView,
     AlertView,
+    DatePicker,
 }
