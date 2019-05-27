@@ -17,7 +17,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import ActionSheet from "react-native-actionsheet";
 import Carousel from 'react-native-snap-carousel';
 import Swipeout from 'react-native-swipeout';
-import Utils from "../../common/utils";
+import Utils from "../../common/Utils";
 import {Dropdown} from "react-native-material-dropdown";
 import DatePicker from "../../components/DatePicker";
 

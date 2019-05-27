@@ -1,8 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { useTranslation } from 'react-i18next';
-import en from './en'
-import zh from './zh'
+import en from './En'
+import zh from './Zh'
 // the translations
 // (tip move them in a JSON file and import them)
 const resources = {

@@ -56,4 +56,4 @@ react 0.59 + dva + react-navigation 3.6.1 构建的快速开发轮子~
     ├── images.js<br>
     ├── index.js<br>
     ├── metrics.js<br>
-    └── styles.js<br>
+    └── Styles.js<br>

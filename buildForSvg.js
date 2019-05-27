@@ -28,7 +28,7 @@ lineReader.on('line', function (line) {
     }
 });
 lineReader.on('close',function () {
-    return fs.writeFile(path.resolve(__dirname, './src/components/aliIcons/nameMap.json'), '{\n'+names.join(',\n')+'\n}', function (err) {
+    return fs.writeFile(path.resolve(__dirname, './src/components/AliIcons/NameMap.json'), '{\n'+names.join(',\n')+'\n}', function (err) {
         if (err) {
             throw new Error(err)
         } else {

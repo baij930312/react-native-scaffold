@@ -4,7 +4,7 @@ import {
     StyleSheet,
     View,
 } from 'react-native';
-import {W,H} from "../common/utils";
+import {W,H} from "../common/Utils";
 
 //分割线
 export default class Separator extends React.Component {

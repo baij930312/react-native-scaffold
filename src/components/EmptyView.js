@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import {Image, StyleSheet, Text, View} from 'react-native';
 
 import {Metrics} from "../themes";
-import {H, SP} from "../common/utils";
-import images from "../themes/images";
-import Styles from "../themes/styles";
+import {H, SP} from "../common/Utils";
+import images from "../themes/Images";
+import Styles from "../themes/Styles";
 
 
 export default class EmptyView extends React.Component {

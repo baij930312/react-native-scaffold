@@ -4,7 +4,7 @@ import EmptyView from './EmptyView'
 import RefreshListView from './RefreshListView'
 import LoadingHOC from './LoadingHOC'
 import Separator from './Separator'
-import AliIcon from './aliIcons/aliIcon'
+import AliIcon from './AliIcons/AliIcon'
 import AlertView from './AlertView'
 import DatePicker from './DatePicker'
 

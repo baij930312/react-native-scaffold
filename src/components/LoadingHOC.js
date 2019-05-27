@@ -1,6 +1,5 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, View, } from 'react-native';
-import { connect } from 'react-redux';
 
 
 export class LoadingIndicator extends React.Component {
@@ -17,10 +16,6 @@ export class LoadingIndicator extends React.Component {
 }
 //loading hoc 子组件调用 this.props.showLoader  显示或隐藏 指示器
 export default (WrappedComponent) => {
-
-    @connect(({ loading }) => ({
-        loading,
-    }))
     class LoadingHOC extends React.Component {
         static navigationOptions = WrappedComponent.navigationOptions|| null ;
 

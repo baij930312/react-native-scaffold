@@ -1,7 +1,7 @@
-import Metrics from './metrics';
-import Colors from './colors';
-import Styles from './styles';
-import Images from './images';
+import Metrics from './Metrics';
+import Colors from './Colors';
+import Styles from './Styles';
+import Images from './Images';
 
 
 

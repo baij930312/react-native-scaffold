@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, SectionList, View} from 'react-native';
 import {Styles} from "../../themes";
-import {H,} from "../../common/utils";
+import {H,} from "../../common/Utils";
 import {Echarts, echarts} from 'react-native-secharts';
 
 

@@ -10,12 +10,12 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import {Styles} from "../../themes";
 import {connect} from "react-redux";
-import AliIcon from "../../components/aliIcons/aliIcon";
+import AliIcon from "../../components/AliIcons/AliIcon";
 import {LoadingHOC} from '../../components/'
 import Separator from "../../components/Separator";
-import Utils, { W} from "../../common/utils";
+import Utils, { W} from "~/common/Utils";
 import { withTranslation } from 'react-i18next';
-import api from "~/net/api";
+import api from "~/net/Api";
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',

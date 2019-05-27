@@ -9,10 +9,10 @@ import {
     StyleSheet,
 } from 'react-native';
 // import Separator from "./Separator";
-import Colors from "../themes/colors";
-import {H} from "../common/utils";
+import Colors from "../themes/Colors";
+import {H} from "../common/Utils";
 import Separator from "./Separator";
-import Styles from "../themes/styles";
+import Styles from "../themes/Styles";
 import PropTypes from "prop-types";
 
 export default class AlertView extends React.Component {

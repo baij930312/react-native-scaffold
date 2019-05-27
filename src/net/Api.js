@@ -1,4 +1,4 @@
-import {ApiAgent} from './agent';
+import {ApiAgent} from './Agent';
 
 export default {
     login: async (uid, type) => {

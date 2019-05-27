@@ -1,17 +1,17 @@
 import {createAppContainer,createStackNavigator,
     createBottomTabNavigator,createMaterialTopTabNavigator
 } from "react-navigation";
-import Home from "../pages/home";
-import Home1 from "../pages/home/home1";
+import Home from "../pages/Home";
+import Home1 from "../pages/Home/Home1";
 import React from "react";
-import Home2 from "../pages/home/home2";
+import Home2 from "../pages/Home/Home2";
 import {Styles} from "../themes";
 
 const tabRouteConfigMap = {
     Home: {
         screen: Home1,
         navigationOptions: () => ({
-            title:'home',
+            title:'Home',
             headerStyle: Styles.navBarStyle,
             headerTintColor: 'red',
             headerTitleStyle: {
