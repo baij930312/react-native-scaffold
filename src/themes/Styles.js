@@ -1,5 +1,6 @@
-import { StyleSheet,StatusBar} from 'react-native';
-import {Metrics} from "./";
+import {StyleSheet, StatusBar, View} from 'react-native';
+import {Metrics, Styles} from "./";
+import React from "react";
 
 export const SelectStyle = ({ios, android, ...common}) => {
     const ps = Platform.OS === 'ios' ? ios : android;
@@ -9,7 +10,9 @@ export const SelectStyle = ({ios, android, ...common}) => {
     };
 };
 
-export default  StyleSheet.create({
+
+
+export default styles = StyleSheet.create({
     //横向布局
     row: {
         flexDirection:'row',
@@ -40,7 +43,8 @@ export default  StyleSheet.create({
         paddingTop: Metrics.isAndroid? StatusBar.currentHeight:0,
         height: (Metrics.isAndroid? StatusBar.currentHeight:0) + 44 ,
         backgroundColor: '#fff',
-        borderBottomColor: '#ccc',
+        borderBottomColor: '#fff',
+        elevation: 0,
     },
     //当不需要导航栏时 的安全区样式
     safeNavBarStyle:{
@@ -51,9 +55,19 @@ export default  StyleSheet.create({
     },
     //底部导航样式
     tabBarStyle: {
-        height: 50,
-        backgroundColor: '#000',
-        flexDirection: 'row',
+        backgroundColor: '#202125',
         justifyContent: 'space-around',
     },
 });
+
+//base header options
+export const commonHeaderOptions = {
+    elevation: 0,
+    headerStyle: styles.navBarStyle,
+    headerTintColor: '#000',
+    headerTitleStyle: {
+        fontWeight: 'bold',
+        flex:1, textAlign: 'center'
+    },
+    headerRight:<View/>,
+};

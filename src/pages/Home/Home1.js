@@ -11,6 +11,8 @@ import {Platform, StyleSheet, Text, SectionList, View} from 'react-native';
 import {Styles} from "../../themes";
 import {H,} from "../../common/Utils";
 import {Echarts, echarts} from 'react-native-secharts';
+import {LoadingHOC} from "../../components";
+import {withTranslation} from "react-i18next";
 
 
 
@@ -240,8 +242,8 @@ function generateOHLC(count) {
         return sign;
     }
 }
-
-
+@withTranslation(Home1)
+@LoadingHOC
 export default class Home1 extends Component {
 
     static navigationOptions = ({ navigation }) => {
@@ -251,26 +253,7 @@ export default class Home1 extends Component {
     };
 
     render() {
-        let ws = new WebSocket('ws://host.com/path');
-        ws.onopen = () => {
-            // connection opened
-            ws.send('something'); // send a message
-        };
 
-        ws.onmessage = (e) => {
-            // a message was received
-            console.log(e.data);
-        };
-
-        ws.onerror = (e) => {
-            // an error occurred
-            console.log(e.message);
-        };
-
-        ws.onclose = (e) => {
-            // connection closed
-            console.log(e.code, e.reason);
-        };
         return (
             <View style={styles.container}>
                 {/*<View><Echarts ref="echarts1" option={this.state.option1} onPress={this.onPress} height={300} /></View>*/}

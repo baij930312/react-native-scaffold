@@ -3,6 +3,7 @@ import {
     PixelRatio,
     Platform
 } from 'react-native';
+import {Styles} from "./index";
 
 const {width, height} = Dimensions.get('screen');
 

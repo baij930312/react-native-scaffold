@@ -35,8 +35,6 @@ export default (WrappedComponent) => {
         render() {
 
             const {loading, size = 'large', ...props} = this.props;
-
-            console.log(loading);
             return (
                 <View style={{flex:1}}>
                     <WrappedComponent {...props} showLoader={this.showLoader}/>

@@ -1,76 +1,33 @@
 import {createAppContainer,createStackNavigator,
     createBottomTabNavigator,createMaterialTopTabNavigator
 } from "react-navigation";
-import Home from "../pages/Home";
-import Home1 from "../pages/Home/Home1";
-import React from "react";
-import Home2 from "../pages/Home/Home2";
-import {Styles} from "../themes";
 
+import React from "react";
+import {Styles} from "../themes";
+import HomeStack from "./HomeStack";
+
+//底部导航配置
 const tabRouteConfigMap = {
-    Home: {
-        screen: Home1,
-        navigationOptions: () => ({
-            title:'Home',
-            headerStyle: Styles.navBarStyle,
-            headerTintColor: 'red',
-            headerTitleStyle: {
-                fontWeight: 'bold',
-            },
-            tabBarLabel: '首页',
-        })
-    },
-    Find: {
-        screen: Home2,
-        navigationOptions: () => ({
-            title:'find',
-            tabBarLabel: '发现',
-        })
-    }
+    home: {
+        screen: HomeStack,
+
+        },
 };
 
-
+//底部导航
 const Tab = createBottomTabNavigator(tabRouteConfigMap, {
-        initialRouteName: 'Find',
+        initialRouteName: 'home',
         tabBarPosition: 'bottom',
         lazy: true,
         swipeEnabled: false,
         tabBarOptions: {
-            activeTintColor: 'red',
-            style: {
-                backgroundColor: '#fff',
-            },
+            activeTintColor: '#E7BF62',
+            inactiveTintColor:'#858587',
+            style: Styles.tabBarStyle,
         }
     }
 );
 
-const mainStack = createStackNavigator({
-
-        Tab:{
-            screen: Tab,
-            navigationOptions: ({ navigation }) => {
-                const { routes, index } = navigation.state;
-                const key =  routes[index].key;
-                return tabRouteConfigMap[key].screen.navigationOptions({ navigation });
-            }
-        },
-        Home1:Home,
-        Home2:Home2,
-    },
-    {
-        defaultNavigationOptions:({ navigation }) => {
-            console.log(navigation);
-            return {
-                // title: 'Home',
-                headerStyle: Styles.navBarStyle,
-                headerTintColor: '#000',
-                headerTitleStyle: {
-                    fontWeight: 'bold',
-                },
-            };
-        },
-    },
-);
 
 
-export default createAppContainer(mainStack);
+export default createAppContainer(Tab);
